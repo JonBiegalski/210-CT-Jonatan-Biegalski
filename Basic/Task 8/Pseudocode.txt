@@ -1,0 +1,14 @@
+//INPUT: String S
+PROCEDURE No_Vowels(S)
+	IF1 S=""
+		RETURN ""
+	END IF1
+	ELSE1
+		IF2 S[1]=(a OR e OR i OR o OR u) DO
+			RETURN No_Vowels((String S without the first character))
+		END IF2
+		ELSE2 DO
+			RETURN "S[1]"+No_Vowels((String S without the first character))
+		END ELSE2
+	END ELSE1
+END PROCEDURE

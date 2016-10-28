@@ -1,0 +1,44 @@
+
+//INPUT: Strings M and N
+PROCEDURE Contain_Both(M, N)			
+	X <- []							//1
+	FOR1 i<-1 TO (Length of M) DO				//n
+		FOR2 j<-1 TO (Length of N) DO			//n*n
+			IF M[i]=N[j] DO				//n*n
+				ADD M[i] to end of X		//n*n?
+				EXIT FOR2			//n*n?
+			END IF					//n*n
+		END FOR2					//n*n
+	END FOR1						//n
+	RETURN X						//1
+END PROCEDURE							//6n^2+2n+2, O(n^2)
+
+
+//INPUT: Strings M and N
+PROCEDURE Contain_Both_Once(M, N)
+	X <- M							//1
+	FOR1 i<-1 TO (Length of N) DO				//n
+		FOR2 j<-1 TO (Length of M) DO			//n*n
+			IF N[i]=M[j] DO				//n*n
+				EXIT FOR2			//n*n
+			END IF					//n*n
+			ADD N[i] to the end of X		//n*n
+		END FOR2					//n*n
+	END FOR1						//n
+	RETURN X						//1
+END PROCEDURE							//6n^2+2n+2, O(n^2)
+
+
+//INPUT: Strings M and N
+PROCEDURE First_Without_Second(M, N)
+	X <- []							//1
+	FOR1 i<-1 TO (Length of M) Do				//n
+		FOR2 j<-1 TO (Length of N) Do			//n*n
+			IF M[i]=N[j] DO				//n*n
+				EXIT FOR2			//n*n
+			END IF					//n*n
+			ADD M[i] to the end of X		//n*n
+		END FOR2					//n*n
+	END FOR1						//n
+	RETURN X						//1
+END PROCEDURE							//6n^2+2n+2, O(n^2)
