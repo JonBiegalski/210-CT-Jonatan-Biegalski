@@ -1,0 +1,46 @@
+Task 1:
+int main() {
+	int deck[10];						//1
+	for (int i = 0; i <= 10; i++)		//N for array of length N
+	{
+		deck[i] = rand() % 11;			//N for array of length N
+	}
+	for (int i = 0; i <= 10; i++)		//N for array of length N
+	{
+		cout << deck[i] << " ";			//N for array of length N
+	}
+	cout << endl;						//1
+	//shuffle	
+	for (int i = 0; i <= 10; i++)		//N for array of length N
+	{
+		int j = rand() % 10;			//N for array of length N
+		int x = deck[i];				//N for array of length N
+		deck[i] = deck[j];				//N for array of length N
+		deck[j] = x;					//N for array of length N
+	}
+
+	for (int i = 0; i <= 10; i++)		//N for array of length N
+	{
+		cout << deck[i] << " ";			//N for array of length N
+	}
+	cout << endl;						//1
+}										// Big O: O(N) if using an array of length N, in this case its O(1)
+
+Task 2:
+int main() {
+	int number;															//1
+	int noOfTrailingZeroes=0;											//1
+	cin >> number;														//1
+	if (number < 5)														//1
+	{																	
+		noOfTrailingZeroes = 0;											//1 
+	}																	
+	else
+	{
+		for (int i = 5; i <= number; i=i*5)								//N dependent, best case scenario is 0, worst case scenario is 12 
+		{
+			noOfTrailingZeroes = noOfTrailingZeroes + (number / i);		//N dependent, best case scenario is 0, worst case scenario is 12 
+		}
+	}
+	cout << noOfTrailingZeroes << " trailing zeroes!";					//1
+}																		// Big O notation with this one is weird, since the biggest thing is 12, the notation should be O(1), but it somehow feels wrong.
