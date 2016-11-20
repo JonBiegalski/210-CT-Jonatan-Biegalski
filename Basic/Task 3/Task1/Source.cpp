@@ -1,3 +1,16 @@
+/*
+//INPUT: Integer N
+PROCEDURE highest_square(N)
+	highest<-1
+	FOR i<-1 TO n/2 DO
+		if i*i>highest AND i*i<N DO
+			highest<-i*i
+		END IF
+	END FOR
+	RETURN highest
+END PROCEDURE
+*/
+
 #include <cstdlib>
 #include <iostream>
 
