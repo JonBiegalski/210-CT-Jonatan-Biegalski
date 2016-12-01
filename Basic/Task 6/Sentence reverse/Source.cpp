@@ -28,9 +28,30 @@ void Sentence_Reverse(vector<string>& sentence) {
 	}
 }
 
+void split_sentence(string sentence, vector<string> &out)
+{
+	string word="";
+	for(int i=0;i<sentence.length();i++)
+	{
+		if(sentence[i]==' ')
+		{
+			out.push_back(word);
+			word="";
+		}
+		else
+		{
+			word=word+sentence[i];
+		}
+		
+	}
+	out.push_back(word);
+}
+
 int main() {
 	char a;
-	vector<string> sentence = {"This","is","really","so","gosh","darn","freaking","awesome"};
+	string sent="This is really so gosh darn freaking awesome";
+	vector<string> sentence = {};
+	split_sentence(sent,sentence);
 	for (size_t i = 0, ilen = sentence.size(); i<ilen; i++)
 	{
 		cout << sentence[i] << " ";

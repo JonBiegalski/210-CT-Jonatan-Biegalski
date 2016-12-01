@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\biegalsj\desktop\graph1\graph1\source.cpp(71): warning C4018: '<': signed/unsigned mismatch
+c:\users\biegalsj\desktop\graph1\graph1\source.cpp(94): warning C4018: '<': signed/unsigned mismatch
+  Graph1.vcxproj -> C:\Users\biegalsj\Desktop\Graph1\Debug\Graph1.exe
+  Graph1.vcxproj -> C:\Users\biegalsj\Desktop\Graph1\Debug\Graph1.pdb (Partial PDB)
